@@ -1,0 +1,24 @@
+{
+  "name": "infusioncodigocafeinado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "js/main.js",
+  "type": "module",
+  "scripts": {
+    "dataFireBill": "json-server js/db/bill.json -p 5600"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CampusLands/infusionCodigoCafeinado.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CampusLands/infusionCodigoCafeinado/issues"
+  },
+  "homepage": "https://github.com/CampusLands/infusionCodigoCafeinado#readme",
+  "dependencies": {
+    "json-server": "^1.0.0-alpha.23"
+  }
+}
