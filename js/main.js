@@ -15,6 +15,8 @@ import {
 // console.log(await getAllClientsStates());
 import{
     getAllRequestsStatus,
-    getAllPaymentsCodeClientsIn2008
+    getAllPaymentsCodeClientsIn2008,
+    getAllRequestsCoderequestCodeclientDatewaitDatedelivery,
+    getAllRequestsCoderequestCodeclientDatewaitDatedeliveryBefore2days
 } from "./module/requests.js";
-console.log(await getAllRequestsStatus());
+console.log(await getAllRequestsCoderequestCodeclientDatewaitDatedeliveryBefore2days());
