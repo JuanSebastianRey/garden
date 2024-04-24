@@ -5,6 +5,16 @@ import {
 // console.log(await getAllOfficesFromSpainCityAndMovil());
 import {
     getAllEmployeesNameLastnameAndEmailJustWithCodeBoss7,
-    getAllPositionNameLastnameEmailofBoss
+    getAllPositionNameLastnameEmailofBoss,
+    getAllEmployeesNameLastnameAndPositionWithoutRepresentanteventas
 } from "./module/employees.js";
-console.log(await getAllPositionNameLastnameEmailofBoss());
+// console.log(await getAllEmployeesNameLastnameAndPositionWithoutRepresentanteventas());
+import {
+    getAllClientsNameFromSpain,
+} from "./module/clients.js";
+// console.log(await getAllClientsStates());
+import{
+    getAllRequestsStatus,
+    getAllPaymentsCodeClientsIn2008
+} from "./module/requests.js";
+console.log(await getAllRequestsStatus());

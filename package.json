@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/CampusLands/infusionCodigoCafeinado#readme",
   "dependencies": {
+    "@formkit/tempo": "^0.1.1",
     "json-server": "^1.0.0-alpha.23"
   }
 }

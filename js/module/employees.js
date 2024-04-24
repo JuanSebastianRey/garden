@@ -35,3 +35,19 @@ export const getAllPositionNameLastnameEmailofBoss = async()=>{
     });
     return dataupdate
 }
+
+// 5. Devuelve un listado con el nombre, apellidos y puesto de aquellos empleados que no sean representantes de ventas.
+export const getAllEmployeesNameLastnameAndPositionWithoutRepresentanteventas = async()=>{
+    let res = await fetch("http://localhost:5502/employees?position_ne=Representante Ventas")
+    let data = await res.json();
+    let dataupdate = [];
+    data.forEach(val => {
+        dataupdate.push({
+            id: val.id,
+            name: val.name,
+            lastname: `${val.lastname1} ${val.lastname2}`, 
+            position: val.position
+        })
+    });
+    return dataupdate
+}
