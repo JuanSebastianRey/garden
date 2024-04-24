@@ -177,13 +177,13 @@
         "id": 22
     },
     {
-        "code_client": 28,
-        "payment": "PayPal",
-        "id_transaction": "ak-std-000022",
-        "date_payment": "2009-01-13",
-        "total": 8489,
-        "id": 23
-    },
+            "code_client": 28,
+            "payment": "PayPal",
+            "id_transaction": "ak-std-000022",
+            "date_payment": "2009-01-13",
+            "total": 8489,
+            "id": 23
+        },
     {
         "code_client": 30,
         "payment": "PayPal",

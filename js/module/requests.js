@@ -61,3 +61,31 @@ export const getAllRequestsCoderequestCodeclientDatewaitDatedeliveryBefore2days 
     }));
     return dataupdate;
 }
+
+// 1. Devuelve un listado de todos los pedidos que fueron **rechazados** en `2009`
+export const getAllRequestsOfStatusRejectedIn2009 = async() =>{
+    let res = await fetch("http://localhost:5508/requests")
+    let data = await res.json();
+    let dataupdate=data.filter((val)=> (new Date(val.date_wait).getFullYear() === 2009 && val.status === "Rechazado"))
+    .map(val =>({
+        code_R: val.code_request,
+        code_C: val.code_client,
+        date_W: val.date_wait,
+        status: val.status,
+    }));
+    return dataupdate;
+}
+
+// 2. Devuelve un listado de todos los pedidos que han sido **entregados** en el mes de enero de cualquier año.
+export const getAllRequestsOfStatusDeliveredInJanuary = async()=>{
+    let res = await fetch("http://localhost:5508/requests")
+    let data = await res.json();
+    let dataupdate=data.filter((val)=> (new Date(val.date_wait).getMonth() === 0 && val.status === "Entregado"))
+    .map(val =>({
+        code_R: val.code_request,
+        code_C: val.code_client,
+        date_W: val.date_wait,
+        status: val.status,
+    }));
+    return dataupdate;
+}

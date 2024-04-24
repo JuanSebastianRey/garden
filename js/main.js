@@ -17,6 +17,13 @@ import{
     getAllRequestsStatus,
     getAllPaymentsCodeClientsIn2008,
     getAllRequestsCoderequestCodeclientDatewaitDatedelivery,
-    getAllRequestsCoderequestCodeclientDatewaitDatedeliveryBefore2days
+    getAllRequestsCoderequestCodeclientDatewaitDatedeliveryBefore2days,
+    getAllRequestsOfStatusRejectedIn2009,
+    getAllRequestsOfStatusDeliveredInJanuary
 } from "./module/requests.js";
-console.log(await getAllRequestsCoderequestCodeclientDatewaitDatedeliveryBefore2days());
+// console.log(await getAllRequestsOfStatusDeliveredInJanuary());
+
+import {
+    getAllPaymentsIn2008WithPaypal
+} from "./module/payments.js";
+console.log(await getAllPaymentsIn2008WithPaypal());
