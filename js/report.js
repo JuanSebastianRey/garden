@@ -49,6 +49,32 @@ queryAboutTable2.addEventListener("click", async(e)=>{
         report__container.innerHTML = plantilla;
     }
 })
+import { getAllEmployeesNameLastnameAndEmailJustWithCodeBoss7 } from "./module/employees.js";
+const queryAboutTable3 = document.querySelector("#queryAboutTable3");
+queryAboutTable3.addEventListener("click", async(e)=>{
+    let [,report__container] = queryAboutTable3.children
+    if(!report__container.innerHTML){
+        let data = await getAllEmployeesNameLastnameAndEmailJustWithCodeBoss7();
+        let plantilla = "";
+        console.log(data);
+        data.forEach(val => {
+            plantilla += `
+                <div class="report__card">
+                <div class="card__title">
+                    <div>Codigo: ${val.code}</div>
+                </div>
+                <div class="card__body">
+                    <div class="body__marck">
+                        <p><b>Nombre del empleado: </b>${val.name} ${val.lastname}</p>
+                        <p><b>Nombre del empleado: </b>${val.email}</p>
+                    </div>
+                </div>
+            </div>
+            `;
+        });
+        report__container.innerHTML = plantilla;
+    }
+})
 import { getClientsEmploy } from "./module/clients.js";
 const queryAboutTable7 = document.querySelector("#queryAboutTable7");
 queryAboutTable7.addEventListener("click", async(e)=>{

@@ -8,6 +8,7 @@ export const getAllEmployeesNameLastnameAndEmailJustWithCodeBoss7 = async()=>{
         let [email] = val.email.match(/(?<=\[)[^\[\]]+@[^@\[\]]+(?=\])/)
 
         dataupdate.push({
+            code: val.employee_code,
             name: val.name,
             lastname: `${val.lastname1} ${val.lastname2}`, 
             email
