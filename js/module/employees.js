@@ -52,6 +52,18 @@ export const getAllEmployeesNameLastnameAndPositionWithoutRepresentanteventas = 
     return dataupdate
 
 }
+// Obtener la informacion de un empleado por su codigo
+export const getEmployByCode = async(code) =>{
+    let res = await fetch(`http://localhost:5502/employees?employee_code=${code}`);
+    let dataClients = await res.json();
+    return dataClients;
+}   
+// Obtener la informacion de un empleado por su codigo
+export const getAllEmploy = async() =>{
+    let res = await fetch(`http://localhost:5502/employees`);
+    let data = await res.json();
+    return data;
+}
 //9. Devuelve un listado que muestre el nombre de cada empleados, 
 // el nombre de su jefe y el nombre del jefe de sus jefe.
 
