@@ -21,9 +21,9 @@ import{
     getAllRequestsOfStatusRejectedIn2009,
     getAllRequestsOfStatusDeliveredInJanuary
 } from "./module/requests.js";
-// console.log(await getAllRequestsOfStatusDeliveredInJanuary());
+// console.log(await getAllPaymentsCodeClientsIn2008());
 
 import {
     getAllPaymentsIn2008WithPaypal
 } from "./module/payments.js";
-console.log(await getAllPaymentsIn2008WithPaypal());
+// console.log(await getAllPaymentsIn2008WithPaypal());

@@ -16,7 +16,6 @@ export const getAllRequestsStatus = async()=>{
 
 
 // // 8. Devuelve un listado con el código de cliente de aquellos clientes que realizaron algún pago en 2008. Tenga en cuenta que deberá eliminar aquellos códigos de cliente que aparezcan repetidos
-import { format } from "@formkit/tempo"
 export const getAllPaymentsCodeClientsIn2008 = async () => {
     let res = await fetch("http://localhost:5508/requests");
     let data = await res.json();
@@ -26,12 +25,12 @@ export const getAllPaymentsCodeClientsIn2008 = async () => {
         )
         .map(val => ({
             code: val.code_client,
-            age: val.date_request
+            date: val.date_request
         }));
 
     return dataupdate;
 }            
-//1. Devuelve un listado con el código de pedido, código de cliente, fecha esperada 
+//9. Devuelve un listado con el código de pedido, código de cliente, fecha esperada 
 //y fecha de entrega de los pedidos que no han sido entregados a tiempo.
 export const getAllRequestsCoderequestCodeclientDatewaitDatedelivery = async ()=>{
     let res = await fetch("http://localhost:5508/requests")
@@ -46,7 +45,7 @@ export const getAllRequestsCoderequestCodeclientDatewaitDatedelivery = async ()=
     return dataupdate;
 }
 
-//2. Devuelve un listado con el código de pedido, código de cliente, fecha esperada y
+//10. Devuelve un listado con el código de pedido, código de cliente, fecha esperada y
 // fecha de entrega de los pedidos cuya fecha de entrega ha sido al menos dos días antes de la fecha esperada.
 
 export const getAllRequestsCoderequestCodeclientDatewaitDatedeliveryBefore2days = async ()=>{
@@ -62,7 +61,7 @@ export const getAllRequestsCoderequestCodeclientDatewaitDatedeliveryBefore2days 
     return dataupdate;
 }
 
-// 1. Devuelve un listado de todos los pedidos que fueron **rechazados** en `2009`
+// 11. Devuelve un listado de todos los pedidos que fueron **rechazados** en `2009`
 export const getAllRequestsOfStatusRejectedIn2009 = async() =>{
     let res = await fetch("http://localhost:5508/requests")
     let data = await res.json();
@@ -76,7 +75,7 @@ export const getAllRequestsOfStatusRejectedIn2009 = async() =>{
     return dataupdate;
 }
 
-// 2. Devuelve un listado de todos los pedidos que han sido **entregados** en el mes de enero de cualquier año.
+// 12. Devuelve un listado de todos los pedidos que han sido **entregados** en el mes de enero de cualquier año.
 export const getAllRequestsOfStatusDeliveredInJanuary = async()=>{
     let res = await fetch("http://localhost:5508/requests")
     let data = await res.json();

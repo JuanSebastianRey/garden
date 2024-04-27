@@ -1,3 +1,16 @@
+export const getAllClientsNameFromSpain= async()=>{
+    let res = await fetch("http://localhost:5501/clients?country=Spain")
+    let data = await res.json();
+    let dataupdate = [];
+    data.forEach(val => {
+        dataupdate.push({
+            country: val.country,
+            name: val.client_name
+        })
+    });
+    return dataupdate
+}
+
 import { 
     getEmployByCode 
 } from "./employees.js";
