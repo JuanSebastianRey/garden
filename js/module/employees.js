@@ -1,7 +1,7 @@
 // 3. Devuelve un listado con el nombre, 
 // apellidos y email de los empleados cuyo jefe tiene un código de jefe igual a 7.
 export const getAllEmployeesNameLastnameAndEmailJustWithCodeBoss7 = async()=>{
-    let res = await fetch("http://localhost:5502/employees?code_boss=7")
+    let res = await fetch("http://172.16.101.146:5402/employees?code_boss=7")
     let data = await res.json();
     let dataupdate = [];
     data.forEach(val => {
@@ -19,7 +19,7 @@ export const getAllEmployeesNameLastnameAndEmailJustWithCodeBoss7 = async()=>{
 // 4. Devuelve el nombre del puesto, nombre, apellidos y email del jefe de la empresa.
 
 export const getAllPositionNameLastnameEmailofBoss = async()=>{
-    let res = await fetch("http://localhost:5502/employees")
+    let res = await fetch("http://172.16.101.146:5402/employees")
     let data = await res.json();
     let dataupdate = [];
     data.forEach(val => {
@@ -39,7 +39,7 @@ export const getAllPositionNameLastnameEmailofBoss = async()=>{
 
 // 5. Devuelve un listado con el nombre, apellidos y puesto de aquellos empleados que no sean representantes de ventas.
 export const getAllEmployeesNameLastnameAndPositionWithoutRepresentanteventas = async()=>{
-    let res = await fetch("http://localhost:5502/employees?position_ne=Representante Ventas")
+    let res = await fetch("http://172.16.101.146:5402/employees?position_ne=Representante Ventas")
     let data = await res.json();
     let dataupdate = [];
     data.forEach(val => {
@@ -55,13 +55,13 @@ export const getAllEmployeesNameLastnameAndPositionWithoutRepresentanteventas = 
 }
 // Obtener la informacion de un empleado por su codigo
 export const getEmployByCode = async(code) =>{
-    let res = await fetch(`http://localhost:5502/employees?employee_code=${code}`);
+    let res = await fetch(`http://172.16.101.146:5402/employees?employee_code=${code}`);
     let dataClients = await res.json();
     return dataClients;
 }   
 // Obtener la informacion de un empleado por su codigo
 export const getAllEmploy = async() =>{
-    let res = await fetch(`http://localhost:5502/employees`);
+    let res = await fetch(`http://172.16.101.146:5402/employees`);
     let data = await res.json();
     return data;
 }

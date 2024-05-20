@@ -1,5 +1,5 @@
 export const getAllClientsNameFromSpain= async()=>{
-    let res = await fetch("http://localhost:5501/clients?country=Spain")
+    let res = await fetch("http://172.16.101.146:5401/clients?country=Spain")
     let data = await res.json();
     let dataupdate = [];
     data.forEach(val => {
@@ -25,7 +25,7 @@ import {
 // Resuelva la consulta:
 
 export const getAll2 = async()=>{
-    let res = await fetch("http://localhost:5501/clients")
+    let res = await fetch("http://172.16.101.146:5401/clients")
     let data = await res.json();
     data.filter(val=>{
         // if(val.)
@@ -41,7 +41,7 @@ export const getAll2 = async()=>{
 // 7. Devuelve el nombre de los clientes y el nombre de sus representantes 
 // junto con la ciudad de la oficina a la que pertenece el representante.
 export const getClientsEmploy = async() =>{
-    let res = await fetch("http://localhost:5501/clients");
+    let res = await fetch("http://172.16.101.146:5401/clients");
     let clients = await res.json();
     for (let i = 0; i < clients.length; i++) {
         let {
